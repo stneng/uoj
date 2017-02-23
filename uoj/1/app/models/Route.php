@@ -77,7 +77,7 @@ class Route {
 		$matches = array();
 		if (isset($route['domain'])) {
 			$domain_pat = strtr($route['domain'], $rep_arr);
-			if (!preg_match('/^'.$domain_pat.'$/', UOJContext::httpHost(), $domain_matches)) {
+			if (!preg_match('/^'.$domain_pat.'$/', UOJContext::httpHost(), $domain_matches) && !UOJConfig::$data['web']['sswitch']) {
 				return false;
 			}
 			$matches = array_merge($matches, $domain_matches);
