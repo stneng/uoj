@@ -72,7 +72,10 @@ class HTML {
 		}
 		if (UOJConfig::$data['web']['sswitch']) {
 			$url='';
-			if ($path=='/') $url='/'; 
+			if ($path=='/') $url='/';
+			if ($path=='/uojHome') {$url='';$path='';}
+		}else{
+			if ($path=='/uojHome') $path='/';
 		}
 		if ($param) {
 			$url .= $path.'?'.HTML::query_string_encode($param);
