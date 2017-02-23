@@ -24,7 +24,7 @@ $config = [
 	'database' => [
 		'database'  => 'app_uoj233',
 		'username' => 'root',
-		'password' => '',
+		'password' => 'root',
 		'host' => '127.0.0.1'
 	],
 	'web' => [
