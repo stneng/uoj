@@ -24,17 +24,21 @@ $config = [
 	'database' => [
 		'database'  => 'app_uoj233',
 		'username' => 'root',
-		'password' => 'root',
+		'password' => '',
 		'host' => '127.0.0.1'
 	],
 	'web' => [
+		'domain' => null,
+		'sswitch' => false,
 		'main' => [
 			'protocol' => 'http',
-			'host' => 'local_uoj.ac'
+			'host' => 'local_uoj.ac',
+			'port' => 80
 		],
 		'blog' => [
 			'protocol' => 'http',
-			'host' => 'blog.local_uoj.ac'
+			'host' => 'blog.local_uoj.ac',
+			'port' => 80
 		]
 	],
 	'security' => [
@@ -48,7 +52,10 @@ $config = [
 	'mail' => [
 		'noreply' => [
 			'username' => 'noreply@none',
-			'password' => 'noreply'
+			'password' => 'noreply',
+			'host' => '',
+			'secure' => '',
+			'port' => 25
 		]
 	],
 	'judger' => [
@@ -62,6 +69,10 @@ $config = [
 			'username' => 'our-root',
 			'password' => rand_str(32)
 		]
+	],
+	'switch' => [
+		'ICP-license' => false,
+		'web-analytics' => false
 	]
 ];
 
