@@ -70,6 +70,10 @@ class HTML {
 		if (UOJConfig::$data['web'][$config['location']]['port'] != 80) {
 			$url .= ':'.UOJConfig::$data['web'][$config['location']]['port'];
 		}
+		if (UOJConfig::$data['web']['sswitch']) {
+			$url='';
+			if ($path=='/') $url='/'; 
+		}
 		if ($param) {
 			$url .= $path.'?'.HTML::query_string_encode($param);
 		} else {
