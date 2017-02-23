@@ -53,7 +53,7 @@ class UOJContext {
 		if ($domain === null) {
 			$domain = UOJConfig::$data['web']['main']['host'];
 		}
-		if (validateIP($domain)) {
+		if (validateIP($domain) || UOJConfig::$data['web']['sswitch']) {
 			$domain = '';
 		} else {
 			$domain = '.'.$domain;
