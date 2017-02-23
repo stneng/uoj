@@ -8,6 +8,7 @@ return [
 	],
 	'web' => [
 		'domain' => null,
+		'sswitch' => false,
 		'main' => [
 			'protocol' => 'http',
 			'host' => 'local_uoj.ac',
