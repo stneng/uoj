@@ -39,7 +39,7 @@
 		<?php endif ?>
 		<title><?= isset($PageTitle) ? $PageTitle : 'UOJ' ?> - <?= $PageMainTitle ?></title>
 		
-		<script type="text/javascript">uojHome = '<?= HTML::url('/') ?>'</script>
+		<script type="text/javascript">uojHome = '<?= HTML::url('/uojHome') ?>'</script>
 
 		<!-- Bootstrap core CSS -->
 		<?= HTML::css_link('/css/bootstrap.min.css?v=2015.5.31') ?>
